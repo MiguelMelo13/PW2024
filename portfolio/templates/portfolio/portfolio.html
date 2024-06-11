@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href='/static/portfolio/style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>My Portfolio</h1>
+        <i id="night-mode-toggle" class="fas fa-moon fa-2x"></i>
+        <div id="clock" class="clock"></div>
+    </div>
+    
+    <div class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src='/static/portfolio/profilepic-removebg-preview.png' alt="Profile Photo" class="profile-photo">
+            <p>I am a dedicated computer engineering student at ULHT, with a passion for programming and technology. 
+            In 2016, I attended the Introduction to Programming summer school at Oxford Scholastica, where I honed my skills in Python programming. In my free time, 
+            I enjoy following the exciting world of Formula One racing, as well as listening to grunge music. Previously, 
+            I was an avid volleyball player, and after turning 18, I took on the role of a volleyball coach until 2021. 
+            Through this experience, I gained valuable leadership and teamwork skills that have helped me succeed in both my academic and personal pursuits.</p>
+        </div>
+    </div>
+
+<div id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project">
+        <a href="https://a21905215.pythonanywhere.com/bandas/index/" target="_blank">
+            <img src="/static/portfolio/whim.png" alt="Bandas Project Image" class="project-image">
+        </a>
+        <h3><a href="https://a21905215.pythonanywhere.com/bandas/index/" target="_blank">Bandas Project</a></h3>
+    </div>
+    <div class="project">
+        <a href="https://a21905215.pythonanywhere.com/deisicourses/" target="_blank">
+            <img src="/static/portfolio/courses.png" alt="Deisi Courses Project Image" class="project-image">
+        </a>
+        <h3><a href="https://a21905215.pythonanywhere.com/deisicourses/" target="_blank">Deisi Courses Project</a></h3>
+    </div>
+    <div class="project">
+        <a href="https://a21905215.pythonanywhere.com/wrongOpinions/index/" target="_blank">
+            <img src="/static/portfolio/milton.png" alt="Wrong Opinions Project Image" class="project-image">
+        </a>
+        <h3><a href="https://a21905215.pythonanywhere.com/wrongOpinions/index/" target="_blank">Wrong Opinions Project</a></h3>
+    </div>
+</div>
+
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>You can put a contact form or simply provide your email address or social media links.</p>
+        <p>
+            <a href="https://github.com/MiguelMelo13" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/miguelmelo127/" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2024 My Portfolio
+</div>
+
+<script src='/static/portfolio/script.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'wrongOpinions/layout.html' %}
+
+{% block title %}{{ user.username }}'s Profile - Wrong Opinions{% endblock %}
+
+{% block content %}
+<div class="user-detail">
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+    {% if user.profilePic %}
+        <img src="{{ user.profilePic.url }}" alt="{{ user.username }}'s profile picture" class="profile-picture">
+    {% endif %}
+    <p>Username: {{ user.username }}</p>
+    <p>Nationality: {{ user.nationality }}</p>
+    <p>Comment Count: {{ user.comment_count }}</p>
+    <p>Date Joined: {{ user.date_joined }}</p>
+
+    <h3>Followed Authors</h3>
+    <ul>
+        {% for author in followed_authors %}
+            <li>
+                <a href="{% url 'author_detail' author_id=author.pk %}">{{ author.first_name }} {{ author.last_name }}</a>
+            </li>
+        {% empty %}
+            <p>No followed authors.</p>
+        {% endfor %}
+    </ul>
+
+    <h3>Comments</h3>
+    <div class="comments">
+        {% for comment in comments %}
+            <div class="comment">
+                <p>{{ comment.content }}</p>
+                <p>On: <a href="{% url 'article_detail' article_id=comment.article.pk %}">{{ comment.article.title }}</a> at {{ comment.created_at }}</p>
+            </div>
+        {% empty %}
+            <p>No comments yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extrastyles %}
+<link rel="stylesheet" href="/static/wrongOpinions/style.css">
+
+{% endblock %}

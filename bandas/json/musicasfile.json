@@ -1,0 +1,82 @@
+{
+  "musicas": [
+    {
+      "titulo": "The Grudge",
+      "album": "Lateralus",
+      "duracao_minutos": 8,
+      "data_lancamento": "2001-05-15"
+    },
+    {
+      "titulo": "Schism",
+      "album": "Lateralus",
+      "duracao_minutos": 6,
+      "data_lancamento": "2001-06-25"
+    },
+    {
+      "titulo": "Parabola",
+      "album": "Lateralus",
+      "duracao_minutos": 6,
+      "data_lancamento": "2002-03-18"
+    },
+    {
+      "titulo": "Californication",
+      "album": "Californication",
+      "duracao_minutos": 5,
+      "data_lancamento": "1999-06-08"
+    },
+    {
+      "titulo": "Scar Tissue",
+      "album": "Californication",
+      "duracao_minutos": 3,
+      "data_lancamento": "1999-05-25"
+    },
+    {
+      "titulo": "Bohemian Rhapsody",
+      "album": "Queen - A night at the Opera",
+      "duracao_minutos": 5,
+      "data_lancamento": "1975-11-21"
+    },
+    {
+      "titulo": "Stairway to Heaven",
+      "album": "Led Zeppelin IV",
+      "duracao_minutos": 8,
+      "data_lancamento": "1971-11-08"
+    },
+    {
+      "titulo": "Smells Like Teen Spirit",
+      "album": "Nevermind",
+      "duracao_minutos": 5,
+      "data_lancamento": "1991-09-10"
+    },
+    {
+      "titulo": "Come Together",
+      "album": "Abbey Road",
+      "duracao_minutos": 4,
+      "data_lancamento": "1969-09-26"
+    },
+    {
+      "titulo": "Back in Black",
+      "album": "Back in Black",
+      "duracao_minutos": 4,
+      "data_lancamento": "1980-07-25"
+    },
+    {
+      "titulo": "Enter Sandman",
+      "album": "Metallica",
+      "duracao_minutos": 5,
+      "data_lancamento": "1991-07-29"
+    },
+    {
+      "titulo": "Money",
+      "album": "Dark Side of the Moon",
+      "duracao_minutos": 7,
+      "data_lancamento": "1973-03-01"
+    },
+    {
+      "titulo": "Paint It Black",
+      "album": "Sticky Fingers",
+      "duracao_minutos": 3,
+      "data_lancamento": "1971-04-23"
+    }
+  ]
+}

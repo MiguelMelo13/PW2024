@@ -1,0 +1,48 @@
+{% extends 'wrongOpinions/layout.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<div class="article-detail">
+    <h2>{{ article.title }}</h2>
+    <p class="author">by <a href="{% url 'author_detail' author_id=article.author.id %}">{{ article.author.first_name }} {{ article.author.last_name }}</a></p>
+    <img src="{{ article.cover_image.url }}" alt="{{ article.title }}">
+    <p class="content">{{ article.core_text }}</p>
+
+    <!-- Display average rating -->
+    <p class="rating">Average Rating: {{ article.average_rating }}</p>
+
+    <!-- Comments section -->
+    <h3 class="comments-heading">Comments</h3>
+    <ul class="comments-list">
+        {% for comment in comments %}
+            <li>
+                <p class="comment-content">{{ comment.content }}</p>
+                <p class="comment-details">by <a href="{% url 'user_detail' user_id=comment.user.id %}">{{ comment.user.username }}</a> on {{ comment.created_at }}</p>
+            </li>
+        {% empty %}
+            <p>No comments yet.</p>
+        {% endfor %}
+    </ul>
+
+    <!-- Add comment form -->
+    {% if user.is_authenticated %}
+        <h3>Add a Comment</h3>
+        <form class="add-comment-form" method="post">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <button type="submit" name="comment">Submit Comment</button>
+        </form>
+
+        <!-- Add rating form -->
+        <h3>Rate this Article</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ rating_form.as_p }}
+            <button type="submit" name="rating">Submit Rating</button>
+        </form>
+    {% else %}
+        <p>You need to <a href="{% url 'login' %}">login</a> to comment or rate.</p>
+    {% endif %}
+</div>
+{% endblock %}

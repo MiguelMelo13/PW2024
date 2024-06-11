@@ -1,0 +1,51 @@
+{% extends "bandas/listas_layout.html" %}
+
+{% block list_content %}
+<!-- Paste the CSS references here -->
+<link rel="stylesheet" type="text/css" href="/static/bandas/style.css">
+
+{% block list_content2 %}
+{% endblock %}
+
+<!-- JavaScript code for handling AJAX delete request -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to delete buttons
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            // Get item ID from data attribute
+            const itemId = this.dataset.itemId;
+            const itemType = this.dataset.itemType;
+
+            // Send AJAX request to delete item
+            fetch(`/bandas/delete_${itemType}/${itemId}/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',  // Include CSRF token for security
+                    'Content-Type': 'application/json'  // Specify JSON content type
+                },
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Handle successful response
+                    return response.json();
+                } else {
+                    // Handle error response
+                    throw new Error(`Error deleting ${itemType}`);
+                }
+            })
+            .then(data => {
+                // Process JSON response data
+                console.log(data.message);
+                // Reload the page or update UI as needed
+                location.reload();
+            })
+            .catch(error => {
+                // Handle error
+                console.error('Error:', error);
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

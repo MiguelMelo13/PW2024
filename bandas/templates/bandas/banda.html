@@ -1,0 +1,43 @@
+{% extends "bandas/layout.html" %}
+
+{% block title %}
+    Band Details - {{ banda.nome }}
+{% endblock %}
+
+{% block content %}
+<div class="band-details-container">
+    <h1>{{ banda.nome }}</h1>
+    <div class="band-info">
+        <p><strong>Formation Year:</strong> {{ banda.ano }}</p>
+        <p><strong>Music Genre:</strong> {{ banda.genero_musical }}</p>
+        <p><strong>Nationality:</strong> {{ banda.nacionalidade }}</p>
+    </div>
+
+    <h2>Biography</h2>
+    <p>{{ banda.biografia }}</p>
+
+    <h2>Albums</h2>
+    <ul class="albums-list">
+        {% for album in albuns_banda %}
+        <li>
+            <a href="{% url 'bandas:album' album.id %}">
+                <strong>{{ album.titulo }}</strong> ({{ album.ano_lancamento }})
+            </a>
+            <div class="album-details">
+                {% if album.genero_musical %}
+                    <p><strong>Genre:</strong> {{ album.genero_musical }}</p>
+                {% endif %}
+                {% if album.produtor %}
+                    <p><strong>Producer:</strong> {{ album.produtor }}</p>
+                {% endif %}
+                {% if album.numero_faixas %}
+                    <p><strong>Tracks:</strong> {{ album.numero_faixas }}</p>
+                {% endif %}
+            </div>
+        </li>
+        {% empty %}
+        <li>No albums available for this band.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

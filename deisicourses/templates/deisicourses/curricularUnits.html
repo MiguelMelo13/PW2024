@@ -1,0 +1,18 @@
+{% extends "deisicourses/layout.html" %}
+
+{% block content %}
+{% load static %}
+<h1>Curricular Units</h1>
+
+{% for year, curricular_units in cu_years.items %}
+<div class="year-box">
+    <h2>Year {{ year }}</h2>
+    <ul class="curricular-units">
+        {% for curUnit in curricular_units %}
+        <li><a href="{% url 'deisicourses:curUnit_detail' curUnit.id %}">{{ curUnit.name }} - {{ curUnit.semester }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+
+{% endblock %}

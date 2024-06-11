@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/bandas/style.css">
+    <meta charset="UTF-8">
+    <title>{% block title %}Minha Música{% endblock %}</title>
+</head>
+<body>
+
+<!-- Barra de navegação fixa no topo -->
+<nav>
+    <!-- Botão com imagem -->
+    <a href="/bandas/index/">
+        <img src="/static/bandas/icon.png" alt="Ícone" />
+    </a>
+
+    <!-- Links para navegação -->
+    <a href="/bandas/lista_bandas">Bandas</a>
+    <a href="/bandas/lista_albuns">Álbuns</a>
+    <a href="/bandas/lista_musicas">Músicas</a>
+
+    <!-- Login/Logout link -->
+    {% if user.is_authenticated %}
+        <a href="{% url 'bandas:logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'bandas:login' %}">Login</a>
+    {% endif %}
+</nav>
+
+<!-- Conteúdo da página -->
+<div class="content">
+    {% block content %}
+    <!-- Este bloco será substituído pelo conteúdo específico de cada página -->
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer>
+    Developed by Miguel Melo
+</footer>
+
+</body>
+</html>

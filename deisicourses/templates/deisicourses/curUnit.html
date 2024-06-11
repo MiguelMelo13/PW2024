@@ -1,0 +1,25 @@
+{% extends "deisicourses/layout.html" %}
+
+{% block content %}
+{%load static%}
+<h1>Curricular Unit Details</h1>
+<div>
+    <h2>{{ curUnit.name }}</h2>
+    <p><strong>Year:</strong> {{ curUnit.year }}</p>
+    <p><strong>Semester:</strong> {{ curUnit.semester }}</p>
+    <p><strong>ECTS:</strong> {{ curUnit.ects }}</p>
+    <p><strong>Readable Code:</strong> {{ curUnit.cu_readable_code }}</p>
+    <p><strong>Time Spent:</strong> {{ curUnit.time_spent }}</p>
+    <p><strong>Branch:</strong> {{ curUnit.cu_branch }}</p>
+    <p><strong>Programming Languages:</strong>
+        {% for language in curUnit.programming_languages.all %}
+            {{ language.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    <p><strong>Teachers:</strong>
+        {% for teacher in curUnit.teachers.all %}
+            {{ teacher.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+</div>
+{% endblock %}

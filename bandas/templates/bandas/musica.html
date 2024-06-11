@@ -1,0 +1,27 @@
+<!-- musica.html -->
+{% extends "bandas/layout.html" %}
+
+{% block title %}
+    Detalhes da Música - {{ musica.titulo }} ({{ musica.album.titulo }})
+{% endblock %}
+
+{% block content %}
+<div class="musica-details-container">
+    <h1>{{ musica.titulo }}</h1>
+    <p><strong>Álbum:</strong> <a href="{% url 'bandas:album' musica.album.id %}">{{ musica.album.titulo }}</a></p>
+    <p><strong>Banda:</strong> <a href="{% url 'bandas:banda' musica.album.banda.id %}">{{ musica.album.banda.nome }}</a></p>
+    {% if musica.spotify_link %}
+    <p><strong>Link do Spotify:</strong> <a href="{{ musica.spotify_link }}" target="_blank">{{ musica.spotify_link }}</a></p>
+    {% endif %}
+    {% if musica.duracao_minutos %}
+    <p><strong>Duração:</strong> {{ musica.duracao_minutos }} minutos</p>
+    {% endif %}
+    {% if musica.letra %}
+    <h2>Letra</h2>
+    <p>{{ musica.letra }}</p>
+    {% endif %}
+    {% if musica.data_lancamento %}
+    <p><strong>Data de Lançamento:</strong> {{ musica.data_lancamento|date:"d/m/Y" }}</p>
+    {% endif %}
+</div>
+{% endblock %}

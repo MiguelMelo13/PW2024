@@ -1,0 +1,25 @@
+{% extends "deisicourses/layout.html" %}
+
+{% block content %}
+{%load static%}
+<h1>{{ course.name }}</h1>
+<p>Presentation: {{ course.presentation }}</p>
+<p>Objectives: {{ course.objectives }}</p>
+<p>Competences: {{ course.competences }}</p>
+<p>Scientific Area: {{ course.scientific_area }}</p>
+<p>Director: {{ course.director }}</p>
+{% if course.deliberation %}
+    <p>Deliberation: <a href="{{ course.deliberation }}" target="_blank">Link to Deliberation</a></p>
+{% endif %}
+<h2>Curricular Units</h2>
+
+{% for year, cu_list in cu_years.items %}
+    <h3>Year {{ year }}</h3>
+    <ul>
+        {% for cu in cu_list %}
+        <li><a href="{% url 'deisicourses:curUnit_detail' curUnit_id=cu.id %}">{{ cu.name }} ({{ cu.semester }})</a></li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+{% endblock %}

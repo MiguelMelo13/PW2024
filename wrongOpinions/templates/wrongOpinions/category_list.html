@@ -1,0 +1,23 @@
+{% extends 'wrongOpinions/lista_layout.html' %}
+
+
+{% block title %}Categorias - Wrong Opinions{% endblock %}
+
+{% block heading %}Categorias{% endblock %}
+
+{% block content %}
+{%load static%}
+<div class="category-list">
+    <h3>Category List</h3>
+    <ul>
+        {% for category in categories %}
+            <li>
+                <a href="{% url 'category_detail' category_id=category.id %}">{{ category.name }}</a>
+                <span>({{ category.article_count }} articles)</span>
+            </li>
+        {% empty %}
+            <p>No category availabale.</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

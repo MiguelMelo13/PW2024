@@ -1,0 +1,12 @@
+{% extends 'wrongOpinions/layout.html' %}
+
+{% block title %}Add Article{% endblock %}
+
+{% block content %}
+<h2>Add New Article</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Article</button>
+</form>
+{% endblock %}

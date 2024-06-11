@@ -1,0 +1,25 @@
+{% extends 'wrongOpinions/layout.html' %}
+
+{% block content %}
+<h3>Register</h3>
+
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+<form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="first_name" placeholder="First Name..">
+    <input type="text" name="last_name" placeholder="Last Name..">
+    <input type="text" name="username" placeholder="Username..">
+    <input type="password" name="password" placeholder="Password..">
+    <input type="password" name="password_confirm" placeholder="Confirm Password..">
+    <input type="file" name="profilePic" accept="image/*">
+    <input type="text" name="nationality" placeholder="Nationality..">
+    <label for="author">Register as an Author</label>
+    <input type="checkbox" id="author" name="is_author" value="True">
+    <input type="submit" value="Register">
+</form>      
+
+{% endblock %}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Wrong Opinions{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'wrongOpinions/style_wrongOpinions.css' %}">
+    <style>
+        /* Style for the back arrow */
+        #backArrow {
+            position: fixed;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            z-index: 9999;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra fixa no topo -->
+    <header>
+        <div class="top-bar">
+            <a href="/wrongOpinions/index" style="text-decoration: none; color: inherit;"><h1>Wrong Opinions</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="/wrongOpinions/categories_list">Categories</a></li>
+                    <li><a href="/wrongOpinions/authors_list">Authors</a></li>
+                    <li><a href="/wrongOpinions/articles_list">Articles</a></li>
+                    
+                    {% if user.is_authenticated %}
+                        <li>
+                            <span>{{ user.username }}</span>
+                            <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit">Logout</button>
+                            </form>
+                        </li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}"><button>Login</button></a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main>
+        {% block content %}
+        <!-- Conteúdo da página vai ser preenchido pelas extensões -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wrong Opinions. All rights reserved.</p>
+    </footer>
+
+    <!-- Back arrow -->
+    <div id="backArrow" onclick="goBack()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 11H7.41l5.3-5.29L12 4l-8 8 8 8 1.29-1.29-5.3-5.29H20v-2z"/></svg>
+    </div>
+
+    <!-- JavaScript to handle navigation back functionality -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

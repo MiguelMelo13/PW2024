@@ -1,0 +1,21 @@
+{% extends 'wrongOpinions/lista_layout.html' %}
+
+{% block title %}Autores - Wrong Opinions{% endblock %}
+
+{% block heading %}Autores{% endblock %}
+
+{% block content %}
+<div class="author-list">
+    <h3>Lista de Autores</h3>
+    <ul>
+        {% for author in authors %}
+            <li>
+                <a href="{% url 'author_detail' author_id=author.id %}">{{ author.first_name }} {{ author.last_name }}</a>
+                <span>({{ author.articles.count }} artigos)</span>
+            </li>
+        {% empty %}
+            <p>Nenhum autor disponível.</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

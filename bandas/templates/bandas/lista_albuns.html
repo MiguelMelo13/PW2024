@@ -1,0 +1,33 @@
+{% extends "bandas/listas_common.html" %}
+
+{% block title %}List of Albums{% endblock %}
+
+{% block list_title %}List of Albums{% endblock %}
+
+{% block list_content %}
+<div class="albums-list">
+    <ul>
+        {% for album in albums_list %}
+        <li>
+            <a href="{% url 'bandas:album' album.id %}" class="item-link"><p>{{ album.titulo }}</p></a>
+            {% if user.is_authenticated %}
+                {% if perms.bandas.change_album_permission %}
+                    <a href="{% url 'bandas:edit_album' album.id %}" class="edit-btn" title="Edit">Edit</a>
+                {% endif %}
+                {% if perms.bandas.delete_album_permission %}
+                    <button class="delete-btn" data-item-id="{{ album.id }}" data-item-type="album">Delete</button>
+                {% endif %}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    {% if user.is_authenticated and perms.bandas.add_album_permission %}
+    <a href="{% url 'bandas:novo_album' %}">
+        <button>Add New Album</button>
+    </a>
+    {% endif %}
+</div>
+{% endblock %}

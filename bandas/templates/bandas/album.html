@@ -1,0 +1,48 @@
+{% extends "bandas/layout.html" %}
+
+{% block title %}
+    Album Details - {{ album.title }} ({{ album.band.name }})
+{% endblock %}
+
+{% block content %}
+<div class="album-details-container">
+    <h1>{{ album.title }}</h1>
+    <div class="album-info">
+        <p><strong>Release Year:</strong> {{ album.ano_lancamento }}</p>
+        <p><strong>Music Genre:</strong> {{ album.genero_musical }}</p>
+        <p><strong>Producer:</strong> {{ album.produtor }}</p>
+        {% if album.numero_faixas %}
+        <p><strong>Number of Tracks:</strong> {{ album.numero_faixas }}</p>
+        {% endif %}
+    </div>
+
+    <h2>Band</h2>
+    <div class="band-info">
+        <p><strong>Name:</strong> <a href="{% url 'bandas:banda' album.banda.id %}" class="band-link">{{ album.banda.nome }}</a></p>
+    </div>
+
+    <h2>Album Songs</h2>
+    <div class="songs-list-container">
+        <ul class="songs-list">
+            {% for song in album.musicas.all %}
+            <li>
+                <a href="{% url 'bandas:musica' song.id %}" class="song-link">
+                    <strong>{{ song.titulo }}</strong>
+                </a>
+                {% if song.duration_minutes %}
+                - Duration: {{ song.duracao_minutos }} minutes
+                {% endif %}
+                {% if song.lyrics %}
+                - <button class="lyrics-toggle">Show Lyrics</button>
+                <div class="lyrics" style="display: none;">
+                    <p>{{ song.letra }}</p>
+                </div>
+                {% endif %}
+            </li>
+            {% empty %}
+            <li>No songs available for this album.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

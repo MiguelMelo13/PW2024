@@ -1,0 +1,20 @@
+{% extends 'wrongOpinions/layout.html' %}
+
+{% block title %}{{ author.first_name }} {{ author.last_name }} - Wrong Opinions{% endblock %}
+
+{% block content %}
+<div class="author-detail">
+    <h2>{{ author.first_name }} {{ author.last_name }}</h2>
+    {% if author.profilePic %}
+        <img src="{{ author.profilePic.url }}" alt="{{ author.first_name }} {{ author.last_name }}">
+    {% else %}
+        <p>No profile picture available</p>
+    {% endif %}
+    <p><strong>Biography:</strong> {{ author.bio }}</p>
+    <p><strong>Website:</strong> <a href="{{ author.website }}" target="_blank">{{ author.website }}</a></p>
+    <p><strong>Location:</strong> {{ author.location }}</p>
+    <p><strong>Nationality:</strong> {{ author.nationality }}</p>
+    <p><strong>Followers:</strong> {{ author.author_followers }}</p>
+    <!-- Adicione outras informações do autor conforme necessário -->
+</div>
+{% endblock %}

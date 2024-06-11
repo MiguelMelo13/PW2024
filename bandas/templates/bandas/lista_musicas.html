@@ -1,0 +1,39 @@
+{% extends "bandas/listas_common.html" %}
+
+{% block title %}Musics List{% endblock %}
+
+{% block list_title %}Musics List{% endblock %}
+
+{% block list_content %}
+<div class="musicas-list-container">
+    <div class="musicas-list">
+        <ul>
+            {% for musica in musicas_list %}
+            <li>
+                <a href="{% url 'bandas:musica' musica.id %}" class="item-link">
+                    {{ musica.titulo }}
+                </a>
+                {% if user.is_authenticated %}
+                    {% if perms.bandas.change_musica_permission %}
+                    <a href="{% url 'bandas:edit_musica' musica.id %}" class="edit-btn" data-item-id="{{ musica.id }}" data-item-type="musica">Edit</a>
+                    {% endif %}
+                    {% if perms.bandas.delete_musica_permission %}
+                    <button class="delete-btn" data-item-id="{{ musica.id }}" data-item-type="musica">Delete</button>
+                    {% endif %}
+                {% endif %}
+            </li>
+            {% empty %}
+            <li>No items available.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div>
+    {% if user.is_authenticated and perms.bandas.add_musica_permission %}
+    <a href="{% url 'bandas:nova_musica' %}">
+        <button>Add new music</button>
+    </a>
+    {% endif %}
+</div>
+{% endblock %}

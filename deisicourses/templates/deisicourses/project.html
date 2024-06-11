@@ -1,0 +1,24 @@
+{% extends "deisicourses/layout.html" %}
+
+{% block content %}
+<div class="project-info">
+    {%load static%}
+    <h1>{{ project.name }}</h1>
+    <div class="author-info">
+        <p><strong>Author:</strong> {{ project.author }}</p>
+        <p><strong>Curricular Unit:</strong> <a href="{% url 'deisicourses:curUnit_detail' project.curricular_unit.pk %}">{{ project.curricular_unit.name }}</a></p>
+        <p><strong>Programming Languages:</strong> {% for language in project.programming_languages.all %}{{ language.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    </div>
+    <p class="description"><strong>Description:</strong> {{ project.description }}</p>
+</div>
+{% if project.video_link %}
+<div class="link-box left-box">
+    <a href="{{ project.video_link }}">Video</a>
+</div>
+{% endif %}
+{% if project.git_repo_link %}
+<div class="link-box right-box">
+    <a href="{{ project.git_repo_link }}">Repository</a>
+</div>
+{% endif %}
+{% endblock %}

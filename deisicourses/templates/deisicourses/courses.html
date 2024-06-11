@@ -1,0 +1,16 @@
+{% extends "deisicourses/layout.html" %}
+
+{% block content %}
+{% load static %}
+<h1>Courses</h1>
+
+{% for course in courses %}
+<a href="{% url 'deisicourses:course_detail' course.id %}" class="course-link">
+    <div class="course">
+        <h2>{{ course.name }}</h2>
+        <p><strong>Scientific Area:</strong> {{ course.scientific_area }}</p>
+    </div>
+</a>
+{% endfor %}
+
+{% endblock %}

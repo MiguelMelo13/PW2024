@@ -1,0 +1,31 @@
+{% extends "deisicourses/layout.html" %}
+
+{% block content %}
+<h1>Welcome to DEISI Courses</h1>
+<p class="intro-text">
+    DEISI Courses is your gateway to exploring the academic offerings of the Department of Informatics and Systems Engineering (DEISI) at our institution. Here, you can find comprehensive information about the courses offered by DEISI, the curricular units that comprise them, and the exciting projects developed within our academic community.
+</p>
+<div class="feature-links">
+    <div class="feature-link">
+        <a href="{% url 'deisicourses:courses' %}">
+            <img src="/static/deisicourses/courses.jpg" alt="Courses">
+            <h2>Courses</h2>
+            <p>Explore our curated collection of courses to discover the diverse range of subjects and disciplines covered by DEISI.</p>
+        </a>
+    </div>
+    <div class="feature-link">
+        <a href="{% url 'deisicourses:curricularUnits' %}">
+            <img src="/static/deisicourses/curricular_units.jpg" alt="Curricular Units">
+            <h2>Curricular Units</h2>
+            <p>Delve into the details of our curricular units to gain insights into the specific topics and areas of study covered within each course.</p>
+        </a>
+    </div>
+    <div class="feature-link">
+        <a href="{% url 'deisicourses:projects' %}">
+            <img src="/static/deisicourses/projects.jpeg" alt="Projects">
+            <h2>Projects</h2>
+            <p>Discover the innovative projects developed by our students, faculty, and researchers, showcasing cutting-edge research and real-world applications.</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

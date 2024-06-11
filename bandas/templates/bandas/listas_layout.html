@@ -1,0 +1,15 @@
+{% extends "bandas/layout.html" %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{% block title %}
+My music - {% block custom_title %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="listas-container">
+    <h1>{% block list_title %}List{% endblock %}</h1>
+    <div class="listas-content">
+        {% block list_content %}{% endblock %}
+    </div>
+</div>
+{% endblock %}

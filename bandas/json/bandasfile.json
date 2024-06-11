@@ -1,0 +1,62 @@
+[
+    {
+        "nome": "Tool",
+        "genero_musical": "Rock",
+        "nacionalidade": "Estados Unidos",
+        "ano": 1990
+    },
+    {
+        "nome": "Red Hot Chili Peppers",
+        "genero_musical": "Rock",
+        "nacionalidade": "Estados Unidos",
+        "ano": 1983
+    },
+    {
+        "nome": "Queen",
+        "genero_musical": "Rock",
+        "nacionalidade": "Reino Unido",
+        "ano": 1970
+    },
+    {
+        "nome": "Led Zeppelin",
+        "genero_musical": "Rock",
+        "nacionalidade": "Reino Unido",
+        "ano": 1968
+    },
+    {
+        "nome": "Nirvana",
+        "genero_musical": "Grunge",
+        "nacionalidade": "Estados Unidos",
+        "ano": 1987
+    },
+    {
+        "nome": "The Beatles",
+        "genero_musical": "Rock",
+        "nacionalidade": "Reino Unido",
+        "ano": 1960
+    },
+    {
+        "nome": "AC/DC",
+        "genero_musical": "Rock",
+        "nacionalidade": "Austrália",
+        "ano": 1973
+    },
+    {
+        "nome": "Metallica",
+        "genero_musical": "Metal",
+        "nacionalidade": "Estados Unidos",
+        "ano": 1981
+    },
+    {
+        "nome": "Pink Floyd",
+        "genero_musical": "Rock Progressivo",
+        "nacionalidade": "Reino Unido",
+        "ano": 1965
+    },
+    {
+        "nome": "The Rolling Stones",
+        "genero_musical": "Rock",
+        "nacionalidade": "Reino Unido",
+        "ano": 1962
+    }
+]

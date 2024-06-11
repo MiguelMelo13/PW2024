@@ -1,0 +1,37 @@
+{% extends 'wrongOpinions/layout.html' %}
+
+{% block title %}Listas - Wrong Opinions{% endblock %}
+
+{% block content %}
+
+<div class="list-container">
+    <h2>{% block heading %}Listas{% endblock %}</h2>
+
+    <div class="category-list">
+        <h3>Categorias</h3>
+        <ul>
+            {% for category in categories %}
+                <li><a href="{% url 'category_detail_view' category_id=category.id %}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="author-list">
+        <h3>Autores</h3>
+        <ul>
+            {% for author in authors %}
+                <li><a href="{% url 'author_detail_view' author_id=author.id %}">{{ author.first_name }} {{ author.last_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="article-list">
+        <h3>Artigos</h3>
+        <ul>
+            {% for article in articles %}
+                <li><a href="{% url 'article_detail_view' article_id=article.id %}">{{ article.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

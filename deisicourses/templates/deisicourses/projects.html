@@ -1,0 +1,16 @@
+{% extends "deisicourses/layout.html" %}
+
+{% block content %}
+{%load static%}
+<h1>Projects</h1>
+
+{% for project in projects %}
+<a href="{% url 'deisicourses:project_detail' project.id %}" class="project-link">
+    <div class="project">
+        <h2>{{ project.name }}</h2>
+        <p><strong>Author:</strong> {{ project.author }}</p>
+    </div>
+</a>
+{% endfor %}
+
+{% endblock %}

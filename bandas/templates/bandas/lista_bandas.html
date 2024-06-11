@@ -1,0 +1,33 @@
+{% extends "bandas/listas_common.html" %}
+
+{% block title %}Band List{% endblock %}
+
+{% block list_title %}Band List{% endblock %}
+
+{% block list_content %}
+<div class="bandas-list">
+    <ul>
+        {% for banda in bandas_list %}
+        <li>
+            <a href="{% url 'bandas:banda' banda.id %}" class="item-link">{{ banda.nome }}</a>
+            {% if user.is_authenticated %}
+                {% if perms.bandas.change_banda_permission %}
+                    <a href="{% url 'bandas:edit_banda' banda.id %}" class="edit-btn" data-item-id="{{ banda.id }}" data-item-type="banda">Edit</a>
+                {% endif %}
+                {% if perms.bandas.delete_banda_permission %}
+                    <button class="delete-btn" data-item-id="{{ banda.id }}" data-item-type="banda">Delete</button>
+                {% endif %}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    {% if user.is_authenticated and perms.bandas.add_banda_permission %}
+    <a href="{% url 'bandas:nova_banda' %}">
+        <button>Add new Band</button>
+    </a>
+    {% endif %}
+</div>
+{% endblock %}

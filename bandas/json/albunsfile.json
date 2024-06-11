@@ -1,0 +1,191 @@
+[
+    {
+        "titulo": "Lateralus",
+        "ano_lancamento": 2001,
+        "data_lancamento": "2001-05-15",
+        "banda": "Tool",
+        "musicas": [
+            {"titulo": "The Grudge", "duracao_minutos": 8},
+            {"titulo": "Schism", "duracao_minutos": 6},
+            {"titulo": "Parabol", "duracao_minutos": 3},
+            {"titulo": "Parabola", "duracao_minutos": 6},
+            {"titulo": "Ticks & Leeches", "duracao_minutos": 8},
+            {"titulo": "Lateralus", "duracao_minutos": 9},
+            {"titulo": "Disposition", "duracao_minutos": 5},
+            {"titulo": "Reflection", "duracao_minutos": 11},
+            {"titulo": "Triad", "duracao_minutos": 9},
+            {"titulo": "Faaip de Oiad", "duracao_minutos": 2}
+        ]
+    },
+    {
+        "titulo": "Californication",
+        "ano_lancamento": 1996,
+        "data_lancamento": "1999-06-08",
+        "banda": "Red Hot Chili Peppers",
+        "musicas": [
+            {"titulo": "Around the World", "duracao_minutos": 4},
+            {"titulo": "Parallel Universe", "duracao_minutos": 4},
+            {"titulo": "Scar Tissue", "duracao_minutos": 3},
+            {"titulo": "Otherside", "duracao_minutos": 4},
+            {"titulo": "Get on Top", "duracao_minutos": 3},
+            {"titulo": "Californication", "duracao_minutos": 5},
+            {"titulo": "Easily", "duracao_minutos": 3},
+            {"titulo": "Porcelain", "duracao_minutos": 2},
+            {"titulo": "Emit Remmus", "duracao_minutos": 4},
+            {"titulo": "I Like Dirt", "duracao_minutos": 3}
+        ]
+    },
+    {
+        "titulo": "A Night at the Opera",
+        "ano_lancamento": 1975,
+        "data_lancamento": "1975-11-21",
+        "banda": "Queen",
+        "musicas": [
+            {"titulo": "Death on Two Legs (Dedicated to...)", "duracao_minutos": 4},
+            {"titulo": "Lazing on a Sunday Afternoon", "duracao_minutos": 1},
+            {"titulo": "I'm in Love with My Car", "duracao_minutos": 3},
+            {"titulo": "You're My Best Friend", "duracao_minutos": 3},
+            {"titulo": "'39", "duracao_minutos": 4},
+            {"titulo": "Sweet Lady", "duracao_minutos": 4},
+            {"titulo": "Seaside Rendezvous", "duracao_minutos": 2},
+            {"titulo": "The Prophet's Song", "duracao_minutos": 8},
+            {"titulo": "Love of My Life", "duracao_minutos": 4},
+            {"titulo": "Good Company", "duracao_minutos": 3}
+        ]
+    },
+    {
+        "titulo": "Led Zeppelin IV",
+        "ano_lancamento": 1971,
+        "data_lancamento": "1971-11-08",
+        "banda": "Led Zeppelin",
+        "musicas": [
+            {"titulo": "Black Dog", "duracao_minutos": 5},
+            {"titulo": "Rock and Roll", "duracao_minutos": 4},
+            {"titulo": "The Battle of Evermore", "duracao_minutos": 5},
+            {"titulo": "Stairway to Heaven", "duracao_minutos": 8},
+            {"titulo": "Misty Mountain Hop", "duracao_minutos": 4},
+            {"titulo": "Four Sticks", "duracao_minutos": 4},
+            {"titulo": "Going to California", "duracao_minutos": 3},
+            {"titulo": "When the Levee Breaks", "duracao_minutos": 8}
+        ]
+    },
+    {
+        "titulo": "Nevermind",
+        "ano_lancamento": 1991,
+        "data_lancamento": "1991-09-24",
+        "banda": "Nirvana",
+        "musicas": [
+            {"titulo": "Smells Like Teen Spirit", "duracao_minutos": 5},
+            {"titulo": "In Bloom", "duracao_minutos": 4},
+            {"titulo": "Come as You Are", "duracao_minutos": 3},
+            {"titulo": "Breed", "duracao_minutos": 4},
+            {"titulo": "Lithium", "duracao_minutos": 4},
+            {"titulo": "Polly", "duracao_minutos": 3},
+            {"titulo": "Territorial Pissings", "duracao_minutos": 3},
+            {"titulo": "Drain You", "duracao_minutos": 4},
+            {"titulo": "Lounge Act", "duracao_minutos": 3},
+            {"titulo": "Stay Away", "duracao_minutos": 4},
+            {"titulo": "On a Plain", "duracao_minutos": 3},
+            {"titulo": "Something in the Way", "duracao_minutos": 4}
+        ]
+    },
+    {
+        "titulo": "Abbey Road",
+        "ano_lancamento": 1969,
+        "data_lancamento": "1969-09-26",
+        "banda": "The Beatles",
+        "musicas": [
+            {"titulo": "Come Together", "duracao_minutos": 4},
+            {"titulo": "Something", "duracao_minutos": 3},
+            {"titulo": "Maxwell's Silver Hammer", "duracao_minutos": 4},
+            {"titulo": "Oh! Darling", "duracao_minutos": 4},
+            {"titulo": "Octopus's Garden", "duracao_minutos": 3},
+            {"titulo": "I Want You (She's So Heavy)", "duracao_minutos": 7},
+            {"titulo": "Here Comes the Sun", "duracao_minutos": 3},
+            {"titulo": "Because", "duracao_minutos": 3},
+            {"titulo": "You Never Give Me Your Money", "duracao_minutos": 4},
+            {"titulo": "Sun King", "duracao_minutos": 3},
+            {"titulo": "Mean Mr. Mustard", "duracao_minutos": 2},
+            {"titulo": "Polythene Pam", "duracao_minutos": 2},
+            {"titulo": "She Came in Through the Bathroom Window", "duracao_minutos": 2},
+            {"titulo": "Golden Slumbers", "duracao_minutos": 4},
+            {"titulo": "Carry That Weight", "duracao_minutos": 4},
+            {"titulo": "The End", "duracao_minutos": 3},
+            {"titulo": "Her Majesty", "duracao_minutos": 1}
+        ]
+    },
+    {
+        "titulo": "Back in Black",
+        "ano_lancamento": 1980,
+        "data_lancamento": "1980-07-25",
+        "banda": "AC/DC",
+        "musicas": [
+            {"titulo": "Hells Bells", "duracao_minutos": 5},
+            {"titulo": "Shoot to Thrill", "duracao_minutos": 5},
+            {"titulo": "What Do You Do for Money Honey", "duracao_minutos": 4},
+            {"titulo": "Givin the Dog a Bone", "duracao_minutos": 3},
+            {"titulo": "Let Me Put My Love into You", "duracao_minutos": 4},
+            {"titulo": "Back in Black", "duracao_minutos": 4},
+            {"titulo": "You Shook Me All Night Long", "duracao_minutos": 3},
+            {"titulo": "Have a Drink on Me", "duracao_minutos": 4},
+            {"titulo": "Shake a Leg", "duracao_minutos": 4},
+            {"titulo": "Rock and Roll Ain't Noise Pollution", "duracao_minutos": 4}
+        ]
+    },
+    {
+        "titulo": "Metallica",
+        "ano_lancamento": 1991,
+        "data_lancamento": "1991-08-12",
+        "banda": "Metallica",
+        "musicas": [
+            {"titulo": "Enter Sandman", "duracao_minutos": 5},
+            {"titulo": "Sad but True", "duracao_minutos": 5},
+            {"titulo": "Holier Than Thou", "duracao_minutos": 4},
+            {"titulo": "The Unforgiven", "duracao_minutos": 6},
+            {"titulo": "Wherever I May Roam", "duracao_minutos": 6},
+            {"titulo": "Don't Tread on Me", "duracao_minutos": 4},
+            {"titulo": "Through the Never", "duracao_minutos": 5},
+            {"titulo": "Nothing Else Matters", "duracao_minutos": 7},
+            {"titulo": "Of Wolf and Man", "duracao_minutos": 4},
+            {"titulo": "The God That Failed", "duracao_minutos": 5},
+            {"titulo": "My Friend of Misery", "duracao_minutos": 6},
+            {"titulo": "The Struggle Within", "duracao_minutos": 4}
+        ]
+    },
+    {
+        "titulo": "The Dark Side of the Moon",
+        "ano_lancamento": 1973,
+        "data_lancamento": "1973-03-01",
+        "banda": "Pink Floyd",
+        "musicas": [
+            {"titulo": "Speak to Me", "duracao_minutos": 2},
+            {"titulo": "Breathe", "duracao_minutos": 3},
+            {"titulo": "On the Run", "duracao_minutos": 3},
+            {"titulo": "Time", "duracao_minutos": 7},
+            {"titulo": "The Great Gig in the Sky", "duracao_minutos": 4},
+            {"titulo": "Money", "duracao_minutos": 7},
+            {"titulo": "Us and Them", "duracao_minutos": 7},
+            {"titulo": "Any Colour You Like", "duracao_minutos": 3},
+            {"titulo": "Brain Damage", "duracao_minutos": 4},
+            {"titulo": "Eclipse", "duracao_minutos": 2}
+        ]
+    },
+    {
+        "titulo": "Sticky Fingers",
+        "ano_lancamento": 1971,
+        "data_lancamento": "1971-04-23",
+        "banda": "The Rolling Stones",
+        "musicas": [
+            {"titulo": "Brown Sugar", "duracao_minutos": 4},
+            {"titulo": "Sway", "duracao_minutos": 4},
+            {"titulo": "Wild Horses", "duracao_minutos": 6},
+            {"titulo": "Can't You Hear Me Knocking", "duracao_minutos": 7},
+            {"titulo": "You Gotta Move", "duracao_minutos": 3},
+            {"titulo": "Bitch", "duracao_minutos": 4},
+            {"titulo": "I Got the Blues", "duracao_minutos": 4},
+            {"titulo": "Sister Morphine", "duracao_minutos": 6},
+            {"titulo": "Dead Flowers", "duracao_minutos": 4},
+            {"titulo": "Moonlight Mile", "duracao_minutos": 6}
+        ]
+    }
+]

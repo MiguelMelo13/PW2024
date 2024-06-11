@@ -1,0 +1,35 @@
+{% extends 'wrongOpinions/layout.html' %}
+
+{% block title %}News Portal{% endblock %}
+
+{% block content %}
+<section class="featured-articles">
+    <h2>Featured Articles</h2>
+    <div class="article-list">
+        <!-- Loop through featured articles from Django backend -->
+        {% for article in featured_articles %}
+            <article>
+                <img src="{{ article.cover_image.url }}" alt="{{ article.title }}">
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.core_text|truncatewords:30 }}</p>
+                <a href="{% url 'article_detail' article.pk %}">Read More</a>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="latest-news">
+    <h2>Latest News</h2>
+    <div class="article-list">
+        <!-- Loop through latest articles from Django backend -->
+        {% for article in latest_articles %}
+            <article>
+                <img src="{{ article.cover_image.url }}" alt="{{ article.title }}">
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.core_text|truncatewords:30 }}</p>
+                <a href="{% url 'article_detail' article.pk %}">Read More</a>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
